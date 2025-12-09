@@ -1,6 +1,6 @@
 export const listOfExperience = [
   {
-    id: "d5f45d4v5c4v5",
+    id: "d5f45d4v5c45",
     category: "developer",
     title: "sabs",
     imagePath: "/public/samei.jpg",
@@ -18,7 +18,7 @@ export const listOfExperience = [
     client: "MR Willianson",
   },
   {
-    id: "5cg2v15cv4cv",
+    id: "5cg2v15cv4cgh",
     category: "developer",
     title: "sabs",
     imagePath: "/public/samei4.jpg",
@@ -37,7 +37,7 @@ export const listOfExperience = [
     client: "Mrs Magda",
   },
   {
-    id: "546df4g5c2v5",
+    id: "546df4g5c2as5",
     category: "developer",
     title: "sabs",
     imagePath: "/public/imageCar.jpg",

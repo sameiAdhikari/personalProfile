@@ -44,7 +44,7 @@ function ColaborateForm() {
   }, [messageAlert]);
   return (
     <>
-      <section className=" min-h-[90dvh] bg-primary flex gap-7 px-14 pt-10 font-serif colaborationForm">
+      <section className=" min-h-[90dvh] bg-primary flex gap-7 px-14 pt-25 font-serif colaborationForm">
         {/* -----------------left section---------------------- */}
         <div className="min-w-[50%] min-h-full">
           <h1 className="text-white text-5xl font-semibold mb-15">

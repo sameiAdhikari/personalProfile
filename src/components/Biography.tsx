@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Biography() {
   return (
-    <section className="min-h-screen px-10 pt-10 pb-15 grid grid-cols-[1fr_30%] gap-10 place-items-center biography">
+    <section className="min-h-screen  px-10 pt-30 pb-15 grid grid-cols-[1fr_30%] gap-10 place-items-center biography">
       <div>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
           Biography

@@ -8,7 +8,7 @@ function Skills() {
     window.scrollTo({ top: actualScroll, left: 0, behavior: "smooth" });
   };
   return (
-    <section className="relative min-h-screen px-20 py-20 skills">
+    <section className="relative min-h-screen px-20 pt-25 pb-20 skills">
       <img
         src="/public/arrowSign.svg"
         alt="background decoration"
