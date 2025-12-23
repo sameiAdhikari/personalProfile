@@ -11,7 +11,6 @@ function HeroSection() {
     <>
       <section className="w-full h-[135dvh] flex items-center justify-center overflow-hidden landingPage">
         <video
-          // src="/public/video.mp4"
           autoPlay
           loop
           muted

@@ -27,7 +27,7 @@ function Footer() {
     <footer className="min-w-full py-10 px-10 text-black">
       <div className="py-10 flex items-center justify-between ">
         <div className="flex flex-col items-center gap-5">
-          <h2 className="text-4xl font-semibold">Samjhana</h2>
+          <h2 className="text-4xl font-semibold">Nishant</h2>
           <p className="max-w-110">
             Feel free to comment us, we are always looking forward to hear form
             you. Your valuable suggestions means a lot to us!{" "}

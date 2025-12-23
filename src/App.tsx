@@ -4,6 +4,7 @@ import Layout from "./pages/Layout";
 import DynamicLayout from "./pages/DynamicLayout";
 import DynamicRouter from "./components/DynamicPage";
 // import DynamicLayout from "./pages/DynamicLayout";
+import DynamicWork from "./pages/DynamicWork";
 
 const routes = createBrowserRouter([
   {
@@ -14,8 +15,12 @@ const routes = createBrowserRouter([
   {
     path: "/work",
     element: <DynamicLayout />,
-    children: [{ path: "/work/:id", element: <DynamicRouter /> }],
+    children: [
+      { path: "/work/:id", element: <DynamicRouter /> },
+      { path: "/work/dynamicwork", element: <DynamicWork /> },
+    ],
   },
+
   { path: "*", element: <div>404 Not Found</div> },
 ]);
 

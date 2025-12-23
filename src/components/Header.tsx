@@ -76,7 +76,7 @@ function Header() {
         scrolledX ? "bg-amber-50" : "bg-transparent"
       } transition-all duration-300 ease-in-out`}
     >
-      <a href="*" className="text-4xl font-semibold text-primary">
+      <a href="/" className="text-4xl font-semibold text-primary">
         NISHANT
       </a>
       <ul className=" flex items-center gap-6 offset">
