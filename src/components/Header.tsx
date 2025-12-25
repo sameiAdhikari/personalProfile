@@ -72,7 +72,7 @@ function Header() {
   };
   return (
     <nav
-      className={`fixed top-0 left-0 w-full h-20 shadow-md flex items-center justify-between text-xl px-10  z-50 ${
+      className={`fixed top-0 left-0 w-full h-20  flex items-center justify-between text-xl px-10  z-50 ${
         scrolledX ? "bg-amber-50" : "bg-transparent"
       } transition-all duration-300 ease-in-out`}
     >
@@ -86,8 +86,8 @@ function Header() {
               // onClick={() => handleNavLink({ scrollTo: link.scrollTo, i })}
               onClick={() => handleNavLink(link, i)}
               className={`${
-                activeTab === i ? "text-black underline" : "text-muted"
-              } text-[20px] font-medium cursor-pointer capitalize transition-all duration-500 hover:text-black hover:underline`}
+                activeTab === i ? " font-medium underline" : ""
+              } text-2xl text-black cursor-pointer capitalize transition-all duration-500  hover:underline`}
             >
               {link.label}
             </button>

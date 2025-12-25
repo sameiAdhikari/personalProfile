@@ -3,8 +3,10 @@ import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import DynamicLayout from "./pages/DynamicLayout";
 import DynamicRouter from "./components/DynamicPage";
+import DynamicBlog from "./components/DynamicBlog";
 // import DynamicLayout from "./pages/DynamicLayout";
 import DynamicWork from "./pages/DynamicWork";
+import Blog from "./pages/Blog";
 
 const routes = createBrowserRouter([
   {
@@ -18,6 +20,13 @@ const routes = createBrowserRouter([
     children: [
       { path: "/work/:id", element: <DynamicRouter /> },
       { path: "/work/dynamicwork", element: <DynamicWork /> },
+      {
+        path: "/work/blog",
+        children: [
+          { index: true, element: <Blog /> },
+          { path: "/work/blog/:id", element: <DynamicBlog /> },
+        ],
+      },
     ],
   },
 

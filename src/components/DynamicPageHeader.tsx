@@ -4,21 +4,21 @@ function DynamicPageHeader() {
   const scrolledX = true;
   return (
     <nav
-      className={` w-full h-20 shadow-md flex items-center justify-between text-xl px-10  z-50 ${
-        scrolledX ? "bg-amber-50" : "bg-transparent"
+      className={` w-full h-20  flex items-center justify-between text-xl px-10  z-50 ${
+        scrolledX ? "bg-transparent" : "bg-transparent"
       } transition-all duration-300 ease-in-out`}
     >
       <Link to="/" className="text-4xl font-semibold text-primary">
         NISHANT
       </Link>
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-10 text-xl">
         <Link to={"/"} className="hover:underline">
           Home
         </Link>
         <Link to={"/work/dynamicwork"} className="hover:underline">
           Work
         </Link>
-        <Link to={"/"} className="hover:underline">
+        <Link to={"/work/blog"} className="hover:underline">
           Blog
         </Link>
       </div>

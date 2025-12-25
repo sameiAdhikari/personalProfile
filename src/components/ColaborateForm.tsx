@@ -6,6 +6,7 @@ import { FaArrowRightLong, FaMap } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { userSchema, type UserSchemaType } from "../zod/formSchema";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 function ColaborateForm() {
   const [isNameHighlighted, setIsNameHighlighted] = useState(false);
@@ -68,10 +69,10 @@ function ColaborateForm() {
               </span>
             </div>
           </div>
-          <button className="mt-15 px-10 py-2 text-2xl  bg-white rounded-full flex gap-5 items-center cursor-pointer hover:bg-secondary transition-all duration-400 ">
+          <Link to={'/work/dynamicwork'} className="w-fit mt-15 px-10 py-2 text-2xl  bg-white rounded-full flex gap-5 items-center cursor-pointer hover:bg-secondary transition-all duration-400 ">
             View Profile
             <FaArrowRightLong />
-          </button>
+          </Link>
         </div>
         {/* -----------------right section---------------------- */}
         <form

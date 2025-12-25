@@ -177,8 +177,8 @@ function DynamicPage() {
               <button className=" flex gap-2 font-medium text-[18px] items-center justify-center">
                 view Project{" "}
                 <span
-                  className={`inline-block transition-transform ${
-                    isZoomin === i ? "-skew-y-20!" : ""
+                  className={`flex transition-transform ${
+                    isZoomin === i ? "-skew-y-30!" : ""
                   }  `}
                 >
                   <FaArrowRightLong className="text-3xl" />
