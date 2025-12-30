@@ -40,26 +40,26 @@ function Testimonials() {
     setCurrentTestimonialIndex(index);
   };
   return (
-    <section className=" relative flex items-center justify-center max-w-screen min-h-screen px-10">
-      <RiDoubleQuotesL className="absolute top-38 left-57 text-7xl z-50 text-amber-300" />
-      <div className="relative min-w-[80%] min-h-[50dvh]  overflow-hidden bg-white rounded-2xl">
+    <section className=" relative flex items-center justify-center py-10 lg:px-10">
+      <RiDoubleQuotesL className="absolute top-5 left-7 lg:top-0 lg:left-25 text-4xl lg:text-7xl z-50 text-amber-300" />
+      <div className="relative w-[98%] md:w-[95%] h-[42dvh] md:h-[30dvh] lg:min-h-[50dvh]  overflow-hidden bg-white rounded-2xl">
         {testimonials.map((testimonial, index) => (
           <div
             key={testimonial.name}
-            className={`absolute top-0  min-w-full min-h-full bg-white rounded-2xl py-5 px-20 flex flex-col  justify-center gap-10 transition-all duration-900 ease-in-out`}
+            className={`absolute top-0  min-w-full min-h-full bg-white rounded-2xl py-1 px-8 md:px-10 lg:px-20 flex flex-col  justify-center gap-10 transition-all duration-900 ease-in-out`}
             style={{
               left: (index - currentTestimonialIndex) * 100 + "%",
             }}
           >
-            <p className="text-xl text-muted">{testimonial.feedback}</p>
+            <p className=" md:text-xl text-muted">{testimonial.feedback}</p>
             <div className="flex items-center gap-5">
               <img
                 src={testimonial.ImageUrl}
                 alt={testimonial.name}
-                className="w-25 h-25 object-cover rounded-full"
+                className="w-15 h-15 md:w-25 md:h-25 object-cover rounded-full"
               />
               <div>
-                <h1 className="text-3xl font-semibold mb-2">
+                <h1 className="text-xl lg:text-3xl font-semibold lg:mb-2">
                   {testimonial.name}
                 </h1>
                 <p>{testimonial.role}</p>
@@ -86,7 +86,7 @@ function Testimonials() {
             onClick={handleNext}
           />
         </div>
-        <div className="absolute bottom-5 left-1/2 flex gap-3">
+        <div className="absolute bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 flex gap-3">
           {testimonials.map((_, index) => (
             <span
               key={index}

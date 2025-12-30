@@ -8,8 +8,8 @@ function Work() {
 
   const [isZoomin, setIsZoomin] = useState<number | null>(null);
   return (
-    <div className="px-10 mt-10">
-      <h1 className="w-full text-center bg-white py-10 rounded-xl text-4xl font-semibold mb-10">
+    <div className="px-5 mt-20 lg:px-10 lg:mt-25">
+      <h1 className="w-full text-center bg-white py-2  lg:py-8 rounded-xl text-xl md:text-2xl lg:text-4xl font-semibold mb-4 lg:mb-10">
         Related Work
       </h1>
       <div className="max-w-screen flex items-center justify-center flex-wrap gap-10 cursor-pointer">
@@ -24,7 +24,7 @@ function Work() {
               window.scrollTo(0, 0);
             }}
           >
-            <div className="w-105 h-100 overflow-hidden rounded-2xl">
+            <div className="max-h-120 md:max-h-150 md:w-[60dvh] lg:w-105 lg:h-100 overflow-hidden rounded-2xl">
               <img
                 src={list?.imagePath}
                 alt={list?.title}
@@ -34,18 +34,20 @@ function Work() {
                 }}
               />
             </div>
-            <p className="text-[15px] mt-10 text-muted capitalize">
+            <p className="text-[15px] mt-4 lg:mt-10 text-muted capitalize">
               {list?.category}
             </p>
-            <h2 className="text-3xl font-semibold capitalize">{list?.title}</h2>
-            <button className=" flex gap-2 font-medium text-[18px] items-center justify-center">
+            <h2 className="text-xl md:text-3xl font-semibold capitalize">
+              {list?.title}
+            </h2>
+            <button className=" flex gap-2 font-medium md:text-[18px] items-center justify-center">
               view Project{" "}
               <span
                 className={`flex transition-transform ${
                   isZoomin === i ? "-skew-y-30!" : ""
                 }  `}
               >
-                <FaArrowRightLong className="text-3xl" />
+                <FaArrowRightLong className="md:text-3xl" />
               </span>
             </button>
           </div>

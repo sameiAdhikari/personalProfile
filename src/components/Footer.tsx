@@ -24,15 +24,15 @@ function Footer() {
     { title: "password protected", route: "/comingSoon" },
   ];
   return (
-    <footer className="min-w-full py-10 px-10 text-black">
-      <div className="py-10 flex items-center justify-between ">
+    <footer className=" px-5 py-5 md:py-10 md:px-10 text-black">
+      <div className="py-10 grid grid-cols-1 md:grid-cols-[1fr_40%] lg:grid-cols-[1fr_40%] gap-10  ">
         <div className="flex flex-col items-center gap-5">
           <h2 className="text-4xl font-semibold">Nishant</h2>
-          <p className="max-w-110">
+          <p className="w-full text-center  md:max-w-140 lg:text-lg">
             Feel free to comment us, we are always looking forward to hear form
             you. Your valuable suggestions means a lot to us!{" "}
           </p>
-          <div className="flex items-center gap-18 mt-4">
+          <div className="flex items-center gap-8 md:gap-18 mt-4">
             <Link
               to={"https://www.facebook.com/nishant.khadka.9237"}
               target="_blank"
@@ -50,8 +50,8 @@ function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between items-center text-lg w-[30%] ">
-          <div className="flex flex-col items-center justify-center gap-3">
+        <div className="flex justify-between items-center lg:text-lg w-full  ">
+          <div className="flex flex-col items-center justify-center gap-1 lg:gap-3">
             {footerLink.map((link) => (
               <NavLink
                 key={link.title}
@@ -66,7 +66,7 @@ function Footer() {
               </NavLink>
             ))}
           </div>
-          <div className="flex flex-col items-center justify-center gap-3">
+          <div className="flex flex-col items-center justify-center gap-1 lg:gap-3">
             {footerLinkTwo.map((link) => (
               <NavLink
                 key={link.title}
@@ -84,12 +84,11 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full p-5 border-t  flex items-center justify-between">
-        <div></div>
+      <div className="w-full p-5 border-t  text-sm lg:text-lg grid grid-cols-1 md:grid-cols-2 gap-1">
         <div className="text-black/80">
           Copyright © 2025 samei Inc. All rights reserved.
         </div>
-        <div className="flex items-center justify-between gap-4 text-muted">
+        <div className="flex md:justify-end items-center  gap-2 lg:gap-4 text-muted">
           <Link to={"/"} className="hover:underline">
             Privacy Policy
           </Link>

@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { IoClose } from "react-icons/io5";
+import { TiThMenu } from "react-icons/ti";
 function Header() {
   const [scrolledX, setScrolledX] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const pathName = useLocation();
   const navLinks = [
     { label: "home", scrollTo: "landingPage" },
@@ -61,6 +64,9 @@ function Header() {
     if (window.scrollY > 80) return setScrolledX(true);
     setScrolledX(false);
   });
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   const handleNavLink = (link: { scrollTo: string }, i: number = 0) => {
     const elementTopPosition = document
       .querySelector(`.${link.scrollTo}`)
@@ -69,38 +75,70 @@ function Header() {
     const scrolledHeight = window.scrollY + elementTopPosition;
     window.scrollTo({ left: 0, top: scrolledHeight, behavior: "smooth" });
     setActiveTab(i);
+    toggleMenu();
   };
+
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full h-20  flex items-center justify-between text-xl px-10  z-50 ${
-        scrolledX ? "bg-amber-50" : "bg-transparent"
-      } transition-all duration-300 ease-in-out`}
-    >
-      <a href="/" className="text-4xl font-semibold text-primary">
-        NISHANT
-      </a>
-      <ul className=" flex items-center gap-6 offset">
-        {navLinks.map((link, i) => (
-          <li key={link.label} className="cursor-pointer">
-            <button
-              // onClick={() => handleNavLink({ scrollTo: link.scrollTo, i })}
-              onClick={() => handleNavLink(link, i)}
-              className={`${
-                activeTab === i ? " font-medium underline" : ""
-              } text-2xl text-black cursor-pointer capitalize transition-all duration-500  hover:underline`}
-            >
-              {link.label}
-            </button>
-          </li>
-        ))}
-      </ul>
-      <button
-        onClick={() => handleNavLink({ scrollTo: "colaborationForm" })}
-        className="bg-[#f0ce0f] px-7 py-[7px] rounded-full font-serif text-black border outline-none border-black hover:bg-transparent hover:text-black hover:border transition-all duration-300 cursor-pointer"
+    <>
+      <nav
+        className={`fixed top-0 left-0 w-screen h-16 lg:h-20  flex items-center justify-between  lg:text-xl px-2 md:px-10  z-50 ${
+          scrolledX ? "bg-amber-50" : "bg-transparent"
+        } transition-all duration-300 ease-in-out`}
       >
-        Let's Talk
-      </button>
-    </nav>
+        <a href="/" className="text-xl lg:text-4xl font-semibold text-primary">
+          NISHANT
+        </a>
+        <ul className="hidden md:flex items-center gap-6 flex-row bg-transparent ">
+          {navLinks.map((link, i) => (
+            <li key={link.label} className="cursor-pointer">
+              <button
+                // onClick={() => handleNavLink({ scrollTo: link.scrollTo, i })}
+                onClick={() => handleNavLink(link, i)}
+                className={`${
+                  activeTab === i ? " font-medium underline" : ""
+                } text-base lg:text-2xl text-black cursor-pointer capitalize transition-all duration-500  hover:underline`}
+              >
+                {link.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+        <div className="flex  gap-2">
+          <button
+            onClick={() => handleNavLink({ scrollTo: "colaborationForm" })}
+            className="bg-[#f0ce0f] text-sm lg:text-xl px-3 md:px-4 py-px md:py-1 lg:px-7  rounded-full font-serif text-black border outline-none border-black hover:bg-transparent hover:text-black hover:border transition-all duration-300 cursor-pointer"
+          >
+            Let's Talk
+          </button>
+          <TiThMenu className="text-3xl md:hidden" onClick={toggleMenu} />
+        </div>
+      </nav>
+      <div
+        className={`${
+          isMenuOpen ? "fixed" : "hidden"
+        } top-0 right-0 w-40 p-5 h-60 rounded-2xl rounded-tr-none m-1 bg-white cursor-pointer md:hidden z-50`}
+      >
+        <IoClose
+          className="absolute top-2 right-2 text-3xl "
+          onClick={toggleMenu}
+        />
+        <ul className="flex flex-col gap-3 ">
+          {navLinks.map((link, i) => (
+            <li key={link.label} className="cursor-pointer">
+              <button
+                // onClick={() => handleNavLink({ scrollTo: link.scrollTo, i })}
+                onClick={() => handleNavLink(link, i)}
+                className={`${
+                  activeTab === i ? " font-medium underline" : ""
+                } text-base lg:text-2xl text-black cursor-pointer capitalize transition-all duration-500  hover:underline`}
+              >
+                {link.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 }
 

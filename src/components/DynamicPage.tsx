@@ -33,29 +33,31 @@ function DynamicPage() {
   }, []);
 
   return (
-    <div className="p-10">
+    <section className=" p-2 md:p-10">
       {isFullscreenActive && (
-        <div className="fixed inset-0 bg-black/80 z-49 grid place-items-center">
+        <div className="fixed inset-0 bg-black/80 z-50 grid place-items-center">
           <img
             src={fullScreenImage}
             alt=""
             className="max-h-[90dvh] max-w-90vw object-cover"
           />
           <RxCross2
-            className="text-5xl fixed top-10 right-10 text-white cursor-pointer"
+            className="text-4xl fixed top-5 right-5 text-white cursor-pointer"
             onClick={removeFullscreen}
           />
         </div>
       )}
-      <h1 className="text-5xl font-semibold ml-10 mb-10">{user?.title}</h1>
-      <div className="flex justify-center gap-8 px-5">
+      <h1 className="mt-15 mb-3 text-3xl lg:text-5xl font-semibold lg:ml-10 lg:mb-10">
+        {user?.title}
+      </h1>
+      <div className="max-w-dvw grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 px-5 md:px-0">
         <img
           src={user?.imagePath}
           alt={user?.title}
-          className="w-170 h-150 rounded-2xl object-cover cursor-zoom-in"
+          className="w-full h-[50dvh] md:w-160 md:h-108 lg:h-150 rounded-2xl object-cover cursor-zoom-in"
           onClick={() => requestFullScreen(user?.imagePath)}
         />
-        <div className="grid grid-cols-[20rem_20rem] grid-rows-[18rem_18rem] gap-7">
+        <div className="grid grid-cols-[10rem_10rem] grid-rows-[10rem_10rem] md:grid-cols-[11rem_11rem] md:grid-rows-[13rem_13rem] lg:grid-cols-[20rem_20rem] lg:grid-rows-[18rem_18rem] gap-7 md:gap-3 lg:gap-7">
           {listOfImage.map((src) => (
             <img
               src={src}
@@ -67,21 +69,27 @@ function DynamicPage() {
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-between my-20 px-25 py-10 bg-white rounded-2xl">
+      <div className="flex items-center justify-between gap-3 text-center my-10 lg:my-20 px-5 md:px-10 lg:px-25 py-10 bg-white rounded-2xl">
         <div className="flex flex-col justify-center items-center">
-          <p className="text-2xl">Client :</p>
-          <h3 className="text-3xl font-semibold">{user?.client}</h3>
+          <p className="text-base md:text-lg lg:text-2xl">Client :</p>
+          <h3 className="text-base md:text-lg lg:text-2xl font-semibold">
+            {user?.client}
+          </h3>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <p className="text-2xl">Location :</p>
-          <h3 className="text-3xl font-semibold">{user?.location}</h3>
+          <p className="text-base md:text-lg lg:text-2xl">Location :</p>
+          <h3 className="text-base md:text-lg lg:text-2xl font-semibold">
+            {user?.location}
+          </h3>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <p className="text-2xl">Category :</p>
-          <h3 className="text-3xl font-semibold">{user?.category}</h3>
+          <p className="text-base md:text-lg lg:text-2xl">Category :</p>
+          <h3 className="text-base md:text-lg lg:text-2xl font-semibold">
+            {user?.category}
+          </h3>
         </div>
       </div>
-      <article className="flex flex-col gap-10">
+      <article className="flex flex-col gap-10 px-3">
         <div>
           <h1 className="text-3xl font-semibold font-serif mb-2">
             01. The Challenge
@@ -147,11 +155,11 @@ function DynamicPage() {
       </article>
       <div className="mt-10">
         <h1 className="text-4xl font-semibold mb-5">Related Work</h1>
-        <div className="flex items-center justify-center gap-10 cursor-pointer">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-4 cursor-pointer">
           {listOfExperience?.slice(0, 3).map((list, i) => (
             <div key={list.id} className="flex items-start flex-col gap-1 ">
               <div
-                className="w-110 h-100 overflow-hidden rounded-2xl"
+                className="w-full h-100 md:w-82 md:h-85 lg:w-full lg:h-120 overflow-hidden rounded-2xl"
                 onMouseEnter={() => setIsZoomin(i)}
                 onMouseLeave={() => setIsZoomin(null)}
                 onClick={() => {
@@ -168,13 +176,13 @@ function DynamicPage() {
                   }}
                 />
               </div>
-              <p className="text-[15px] mt-10 text-muted capitalize">
+              <p className="text-[15px] lg:text-[15px] mt-3 lg:mt-10 text-muted capitalize">
                 {list?.category}
               </p>
-              <h2 className="text-3xl font-semibold capitalize">
+              <h2 className="text-xl lg:text-3xl font-semibold capitalize">
                 {list?.title}
               </h2>
-              <button className=" flex gap-2 font-medium text-[18px] items-center justify-center">
+              <button className=" flex gap-2 font-medium text-[15px] lg:text-[18px] items-center justify-center">
                 view Project{" "}
                 <span
                   className={`flex transition-transform ${
@@ -188,7 +196,7 @@ function DynamicPage() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
