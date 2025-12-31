@@ -5,7 +5,6 @@ import { listOfBlogs } from "../data/data";
 
 function Blog() {
   const navigate = useNavigate();
-
   const [isZoomin, setIsZoomin] = useState<number | null>(null);
   return (
     <div className="mt-20 px-2 lg:px-10 lg:mt-25">

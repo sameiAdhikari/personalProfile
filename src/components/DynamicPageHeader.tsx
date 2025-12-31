@@ -9,35 +9,12 @@ function DynamicPageHeader() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.stopPropagation();
+    toggleMenu();
+    window.scrollTo(0, 0);
+  };
   return (
-    // <nav
-    //   className={` w-full h-20  flex items-center justify-between text-xl px-10  z-50 ${
-    //     scrolledX ? "bg-transparent" : "bg-transparent"
-    //   } transition-all duration-300 ease-in-out`}
-    // >
-    //   <Link to="/" className="text-4xl font-semibold text-primary">
-    //     NISHANT
-    //   </Link>
-    //   <div className="flex items-center gap-10 text-xl">
-    //     <Link to={"/"} className="hover:underline">
-    //       Home
-    //     </Link>
-    //     <Link to={"/work/dynamicwork"} className="hover:underline">
-    //       Work
-    //     </Link>
-    //     <Link to={"/work/blog"} className="hover:underline">
-    //       Blog
-    //     </Link>
-    //   </div>
-
-    //   <Link
-    //     to={"/"}
-    //     // onClick={() => handleNavLink({ scrollTo: "colaborationForm", i: 0 })}
-    //     className="bg-[#f0ce0f] px-7 py-[7px] rounded-full font-serif text-black border outline-none border-black hover:bg-transparent hover:text-black hover:border transition-all duration-300 cursor-pointer"
-    //   >
-    //     Let's Talk
-    //   </Link>
-    // </nav>
     <nav
       className={`fixed top-0 left-0 w-screen h-16 lg:h-20  flex items-center justify-between  lg:text-xl px-2 md:px-10  z-50 ${
         scrolledX ? "bg-amber-50" : "bg-transparent"
@@ -46,7 +23,12 @@ function DynamicPageHeader() {
       <a href="/" className="text-xl lg:text-4xl font-semibold text-primary">
         NISHANT
       </a>
-      <div className="hidden md:flex items-center gap-10 text-xl">
+      <div
+        className="hidden md:flex items-center gap-10 text-xl"
+        onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
+          handleClick(e)
+        }
+      >
         <Link to={"/"} className="hover:underline">
           Home
         </Link>
@@ -66,6 +48,9 @@ function DynamicPageHeader() {
         </button>
         <TiThMenu className="text-3xl md:hidden" onClick={toggleMenu} />
         <div
+          onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
+            handleClick(e)
+          }
           className={`fixed top-0 right-0 flex flex-col items-center gap-5 text-xl bg-white w-40 p-5 h-50 rounded-2xl rounded-tr-none m-1 z-50 cursor-pointer md:hidden ${
             isMenuOpen ? "flex" : "hidden"
           }`}

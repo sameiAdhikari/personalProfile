@@ -47,7 +47,7 @@ function DynamicPage() {
           />
         </div>
       )}
-      <h1 className="mt-15 mb-3 text-3xl lg:text-5xl font-semibold lg:ml-10 lg:mb-10">
+      <h1 className="mt-15 mb-3 text-xl lg:text-3xl lg:underline font-semibold lg:ml-10 lg:mb-10">
         {user?.title}
       </h1>
       <div className="max-w-dvw grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 px-5 md:px-0">
@@ -179,7 +179,7 @@ function DynamicPage() {
               <p className="text-[15px] lg:text-[15px] mt-3 lg:mt-10 text-muted capitalize">
                 {list?.category}
               </p>
-              <h2 className="text-xl lg:text-3xl font-semibold capitalize">
+              <h2 className="text-base lg:text-xl font-semibold capitalize">
                 {list?.title}
               </h2>
               <button className=" flex gap-2 font-medium text-[15px] lg:text-[18px] items-center justify-center">

@@ -46,7 +46,7 @@ function Experience() {
               } `}
             >
               <p className="text-muted md:mb-2">{el.category}</p>
-              <p className="text-xl md:text-3xl font-semibold capitalize">
+              <p className=" text-base lg:text-xl font-semibold capitalize">
                 {el.title}
               </p>
               <p className="flex items-center gap-1 md:text-lg font-semibold">
