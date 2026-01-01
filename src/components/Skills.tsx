@@ -20,7 +20,7 @@ function Skills() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-8 place-items-center ">
         <div className="flex flex-col items-center justify-center gap-3 md:gap-0 lg:gap-3 rounded-xl px-4 py-8 md:px-10 md:py-15  transition-transform duration-300">
           <img
-            src="/public/coding.svg"
+            src="/coding.svg"
             alt="coding image"
             className="p-2 lg:w-25 lg:h-25 md:mb-6 md:p-4 bg-amber-200 rounded-2xl"
           />
@@ -41,7 +41,7 @@ function Skills() {
         </div>
         <div className="flex flex-col items-center justify-center gap-3 md:gap-0 lg:gap-3 rounded-xl px-4 py-8 md:px-10 md:py-15  transition-transform duration-300 bg-white">
           <img
-            src="/public/coding-two.svg"
+            src="/coding-two.svg"
             alt="coding image"
             className="p-2 lg:w-25 lg:h-25 md:mb-6 md:p-4 bg-amber-300 rounded-2xl"
           />
@@ -63,7 +63,7 @@ function Skills() {
         </div>
         <div className="flex flex-col items-center justify-center gap-3 md:gap-0 lg:gap-3 rounded-xl px-4 py-8 md:px-10 md:py-15  transition-transform duration-300">
           <img
-            src="/public/design.svg"
+            src="/design.svg"
             alt="coding image"
             className="p-2 lg:w-25 lg:h-25 md:mb-6 md:p-4 bg-amber-200 rounded-2xl"
           />
