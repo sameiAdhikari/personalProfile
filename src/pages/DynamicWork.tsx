@@ -12,7 +12,7 @@ function Work() {
       <h1 className="w-full text-center bg-white py-2  lg:py-8 rounded-xl  md:text-2xl lg:text-4xl font-semibold mb-4 lg:mb-10">
         Related Work
       </h1>
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 cursor-pointer">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 cursor-pointer">
         {listOfExperience?.map((list, i) => (
           <div
             key={list.id}
