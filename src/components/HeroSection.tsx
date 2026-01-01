@@ -29,9 +29,9 @@ function HeroSection() {
               Hi, My name is
             </span>
             <h1 className="text-[35px] md:text-6xl font-bold  mb-4">
-              Nishant Khadka
+              SAMJHANA ADHIKARI
             </h1>
-            <div className=" absolute bottom-4 right-16 ">
+            <div className=" absolute bottom-4 lg:bottom-13 right-16 ">
               <svg
                 viewBox="0 0 300 300"
                 className="animateSpin w-100px h-[100px] md:w-[150px] md:h-[150px]"

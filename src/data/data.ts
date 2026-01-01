@@ -39,7 +39,7 @@ export const listOfExperience = [
     id: "z4x5c6v7b8n9",
     category: "developer",
     title: "Custom Blog and Content Management System for Tech Writers",
-    imagePath: "/public/n3.jpg",
+    imagePath: "/public/np.png",
     height: "88dvh",
     location: "Butwal",
     client: "Tech Writers Community",

@@ -86,7 +86,7 @@ function Header() {
         } transition-all duration-300 ease-in-out`}
       >
         <a href="/" className="text-xl lg:text-4xl font-semibold text-primary">
-          NISHANT
+          SAMEI
         </a>
         <ul className="hidden md:flex items-center gap-6 flex-row bg-transparent ">
           {navLinks.map((link, i) => (
