@@ -9,21 +9,21 @@ function Testimonials() {
       role: "Software Engineer at TechCorp",
       feedback:
         "I am incredibly grateful for Kristina's web development services. Their technical skills and problem-solving abilities helped us launch a robust and scalable website within the desired timeline. Their professionalism and open communication made the entire process smooth and efficient.",
-      ImageUrl: "/public/men.jpg",
+      ImageUrl: "/men.jpg",
     },
     {
       name: "John Smith",
       role: "Product Manager at InnovateX",
       feedback:
         "An impressive showcase of skills and experience. Truly stands out from the crowd. Highly recommended!  ",
-      ImageUrl: "/public/women.jpg",
+      ImageUrl: "/women.jpg",
     },
     {
       name: "Alice Johnson",
       role: "CTO at DevSolutions",
       feedback:
         "A well-structured and visually appealing portfolio. It effectively highlights the individual's expertise and accomplishments.",
-      ImageUrl: "/public/her.jpg",
+      ImageUrl: "/her.jpg",
     },
   ];
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
