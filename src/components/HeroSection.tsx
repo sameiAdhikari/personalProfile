@@ -64,13 +64,13 @@ function HeroSection() {
           </div>
           <div className="w-full h-full text-lg md:text-xl lg:text-2xl mb-8 ">
             <img
-              src="/public/samei.jpg"
+              src="/samei.jpg"
               className="max-w-full min-h-full object-cover rounded-full "
             />
           </div>
           <div className="relative col-span-2 mt-6 md:mt-2 lg:col-span-1 w-full h-full flex flex-col gap-1 lg:gap-4 justify-end items-start text-lg md:text-xl font-poppins ">
             <img
-              src="/public/arrowSign.svg"
+              src="/arrowSign.svg"
               className="w-35 lg:w-fit absolute top-[20%] md:top-[21%] lg:top-[40%] left-[21%] md:left-[12%] lg:left-[32%] z-[-1]"
             />
             <span className="">I'm a passionate </span>

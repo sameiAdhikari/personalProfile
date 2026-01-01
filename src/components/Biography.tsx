@@ -67,7 +67,7 @@ function Biography() {
             </div>
             <div className="w-full float-start mt-6 md:mt-10">
               <Link
-                to={"public/cv.pdf"}
+                to={"/cv.pdf"}
                 target="_blank"
                 className="flex items-center gap-5 px-4 py-1 lg:px-8 lg:py-2 bg-amber-400 text-base lg:text-2xl font-semibold rounded-full border border-primary hover:bg-transparent hover:text-primary hover:border-primary transition-all duration-300 cursor-pointer md:mt-4 font-serif w-fit"
               >
@@ -114,7 +114,7 @@ function Biography() {
       </div>
       <div className="relative mx-auto">
         <img
-          src="/public/sameiSari.jpg"
+          src="/sameiSari.jpg"
           className="md:h-[60dvh] md:w-[60dvh] lg:min-h-full lg:w-full
          object-cover rounded-2xl"
         />

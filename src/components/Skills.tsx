@@ -10,7 +10,7 @@ function Skills() {
   return (
     <section className="relative  px-4 py-5 lg:px-10 lg:py-20 skills">
       <img
-        src="/public/arrowSign.svg"
+        src="/arrowSign.svg"
         alt="background decoration"
         className="absolute top-10 lg:top-31 left-[38%] md:left-[41%] lg:left-[41%] object-cover w-[35%] md:w-[28%] lg:w-[25%] -z-1"
       />
